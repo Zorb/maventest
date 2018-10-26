@@ -54,7 +54,18 @@ public class MovieDBRepository implements MovieRepository{
 		}
 		return "{\"message\": \"movie sucessfully deleted\"}";
 	}
-
+	public String getMovie(Long id) {
+		Movie movieInDB = findMovie(id);
+		
+			return util.getJSONForObject(movieInDB);
+	
+	}
+	public String updateMovie(Long id) {
+		Movie movieInDB = findMovie(id);
+		
+			return util.getJSONForObject(movieInDB);
+	
+	}
 	private Movie findMovie(Long id) {
 		return manager.find(Movie.class, id);
 	}

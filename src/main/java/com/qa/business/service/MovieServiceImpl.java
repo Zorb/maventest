@@ -17,7 +17,12 @@ public class MovieServiceImpl implements MovieService{
 	public String deleteMovie(Long id) {
 		return repo.deleteMovie(id);
 	}
-	
+	public String getMovie(Long id) {
+		return repo.getMovie(id);
+	}
+	public String updateMovie(Long id) {
+		return repo.updateMovie(id);
+	}
 	
 	public String getAllMovies() {
 		return repo.getAllMovies();
